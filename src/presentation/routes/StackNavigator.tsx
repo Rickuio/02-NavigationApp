@@ -3,11 +3,13 @@ import { HomeScreen } from '../screens/home/HomeScreen';
 import { ProductsScreen } from '../screens/products/ProductsScreen';
 import { SettingsScreen } from '../screens/settings/SettingsScreen';
 import { ProductScreen } from '../screens/products/ProductScreen';
+import { AboutScreen } from '../screens/about/AboutScreen';
 
 export type RootStackParams = {
   Home: undefined,
   Product: { id:number, name: string },
   Products: undefined,
+  About: undefined,
   Settings: undefined
 }
 
@@ -24,8 +26,9 @@ export const StackNavigator = () => {
       }
     } }>
       <Stack.Screen name="Home" component={ HomeScreen } />
-      <Stack.Screen name="Product" component={ ProductScreen } />
+      <Stack.Screen name="About" component={ AboutScreen } />
       <Stack.Screen name="Products" component={ ProductsScreen } />
+      <Stack.Screen name="Product" component={ ProductScreen } />
       <Stack.Screen name="Settings" component={SettingsScreen } />
     </Stack.Navigator>
   );

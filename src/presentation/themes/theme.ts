@@ -19,7 +19,10 @@ export const globalStyles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: globalColors.blank
+        backgroundColor: globalColors.blank,
+        justifyContent: 'center',
+        alignItems: 'center'
+
     },
     primaryButton: {
         backgroundColor: globalColors.primary,
@@ -34,6 +37,14 @@ export const globalStyles = StyleSheet.create({
     buttonText: {
         color: globalColors.blank,
         fontSize: 18
-    }
-
+    },
+    speedText: {
+        fontSize: 24,
+        marginBottom: 20,
+    },
+        warningText: {
+        fontSize: 18,
+        color: 'red',
+        fontWeight: 'bold',
+    },
 })
