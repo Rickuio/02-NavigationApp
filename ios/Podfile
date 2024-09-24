@@ -23,6 +23,9 @@ target 'NavigationApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Agregar esta línea para react-native-geolocation-service
+  pod 'react-native-geolocation-service', :path => '../node_modules/react-native-geolocation-service'
+
   target 'NavigationAppTests' do
     inherit! :complete
     # Pods for testing
