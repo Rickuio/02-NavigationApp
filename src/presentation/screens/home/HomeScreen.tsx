@@ -4,13 +4,14 @@ import { DrawerActions, type NavigationProp, useNavigation } from '@react-naviga
 import { PrimaryButton } from '../../components/shared/PrimaryButton'
 import type { RootStackParams } from '../../routes/StackNavigator'
 import { globalStyles } from '../../themes/theme'
+import { HamburgerMenu } from '../../components/shared/HamburgerMenu'
 
 export const HomeScreen = () => {
 
   console.log('Iniciando..');
 
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
-
+  /*
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
@@ -20,10 +21,13 @@ export const HomeScreen = () => {
       )
     })
   }, [])
-  
+  */
 
   return (
     <View style={ globalStyles.container}>
+
+        <HamburgerMenu />
+        
         <PrimaryButton 
           onPress={ () => navigation.navigate('Products') }
           label='Productos' 
