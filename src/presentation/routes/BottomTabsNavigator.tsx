@@ -6,6 +6,7 @@ import { globalColors } from "../themes/theme";
 import { Text } from "react-native";
 import { TopTabsNavigator } from "./TopTabsNavigator";
 import { StackNavigator } from "./StackNavigator";
+import { IonIcon } from "../components/shared/IonIcon";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +18,7 @@ export const BottomTabNavigator = () => {
             }}
             screenOptions={{
                 //headerShown: false,
+                tabBarActiveTintColor: globalColors.primary,
                 tabBarLabelStyle: {
                     marginBottom: 5,
                 },
@@ -29,9 +31,20 @@ export const BottomTabNavigator = () => {
                 }
             }}
         >
-            <Tab.Screen options={{ title: 'T1', tabBarIcon: ({ color }) => (<Text style={{ color }}>Tab1</Text>)}} name="Tab1"  component={ Tab1Screen } />
-            <Tab.Screen options={{ title: 'T2', tabBarIcon: ({ color }) => (<Text style={{ color }}>Tab2</Text>)}} name="Tab2"  component={ TopTabsNavigator } />
-            <Tab.Screen options={{ title: 'T3', tabBarIcon: ({ color }) => (<Text style={{ color }}>Tab3</Text>)}} name="Tab3"  component={ StackNavigator } />
+            <Tab.Screen options={{ title: 'T1', tabBarIcon: ({ color }) => (
+                <Text style={{ color }}>
+                    <IonIcon name = 'rocket-outline' size={30} color='blue' />
+                </Text>)}} name="Tab1"  component={ Tab1Screen } 
+            />
+            <Tab.Screen options={{ title: 'T2', tabBarIcon: ({ color }) => (
+                <Text style={{ color }}>
+                    <IonIcon name = 'car-sport-outline' size={30} color='blue' />
+                </Text>)}} name="Tab2"  component={ TopTabsNavigator } 
+            />
+            <Tab.Screen options={{ title: 'T3', tabBarIcon: ({ color }) => (
+                    <IonIcon name = 'id-card-outline' size={30} color='blue' />    
+                )}} name="Tab3"  component={ StackNavigator } 
+            />
         </Tab.Navigator>
     )
 }
